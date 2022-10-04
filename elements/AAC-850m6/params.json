@@ -1,0 +1,20 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 45,
+        "width": 150
+    },
+    "display": "PaperCSS button",
+    "fields": {
+        "AAE": {
+            "caption": "Testf",
+            "default_val": "Dddd",
+            "doc": "",
+            "editor": "StaticText",
+            "name": "testf",
+            "rank": 0
+        }
+    },
+    "icon": "ion-ios-paper-outline"
+}
