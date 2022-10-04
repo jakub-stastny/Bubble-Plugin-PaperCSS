@@ -23,5 +23,8 @@
             "rank": 0
         }
     },
-    "icon": "ion-ios-paper-outline"
+    "icon": "ion-ios-paper-outline",
+    "property_applications": {
+        "resizable": true
+    }
 }
