@@ -4,7 +4,7 @@ function(instance, properties) {
     button.innerText = properties.label
     button.style.width = properties.bubble.width() + "px"
     button.style.height = properties.bubble.height() + "px"
-    button.classList.add("btn-success")
+    button.classList.add("btn-" + properties.type)
 
     instance.canvas.append(button)
 }

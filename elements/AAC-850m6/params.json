@@ -1,5 +1,6 @@
 {
     "add_is_visible": true,
+    "can_fit_width": true,
     "category": "visual elements",
     "default_dim": {
         "height": 45,
@@ -21,10 +22,21 @@
             "editor": "StaticText",
             "name": "label",
             "rank": 0
+        },
+        "AAG": {
+            "caption": "Type",
+            "default_val": "success",
+            "doc": "https://www.getpapercss.com/docs/components/buttons/",
+            "editor": "Dropdown",
+            "name": "type",
+            "options": "primary,secondary,success,warning,danger,success-outline,warning-outline,danger-outline",
+            "rank": 1
         }
     },
     "icon": "ion-ios-paper-outline",
     "property_applications": {
+        "Background": false,
+        "MinWidth": true,
         "resizable": true
     }
 }
