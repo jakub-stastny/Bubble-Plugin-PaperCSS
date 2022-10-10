@@ -4,15 +4,15 @@
     "can_fit_width": true,
     "category": "visual elements",
     "default_dim": {
-        "height": 45,
-        "width": 150
+        "height": 55,
+        "width": 120
     },
     "display": "PaperCSS button",
     "events": {
         "AAF": {
-            "caption": "Clicked",
+            "caption": "is clicked",
             "doc": "When the button is clicked",
-            "name": "clicked"
+            "name": "Click"
         }
     },
     "fields": {
