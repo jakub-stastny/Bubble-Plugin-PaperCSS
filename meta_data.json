@@ -1,4 +1,10 @@
 {
+    "categories": {
+        "0": "containers",
+        "1": "productivity",
+        "2": "technical"
+    },
     "image": "//s3.amazonaws.com/appforest_uf/f1531455189113x959372189361602000/Bubble%20Icon.png",
+    "license": "private",
     "name": "PaperCSS"
 }

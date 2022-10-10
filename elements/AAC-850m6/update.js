@@ -3,5 +3,5 @@ function(instance, properties, context) {
 
     button.innerText = properties.label
     button.classList.add("btn-" + properties.type)
-    console.log(properties.type, button.classList)
+    button.disabled = properties.disabled
 }
