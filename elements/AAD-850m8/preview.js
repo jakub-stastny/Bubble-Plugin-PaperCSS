@@ -1,7 +1,7 @@
 function(instance, properties) {
-	const label = document.createElement("label")
-    const labelSpan = document.createElement("span")
-    const checkbox = document.createElement("input")
+	const label = element("label")
+    const labelSpan = element("span")
+    const checkbox = element("input")
     
     label.append(checkbox)
     label.append(labelSpan)
@@ -26,3 +26,7 @@ function(instance, properties) {
 	labelSpan.innerText = properties.label
 	checkbox.disabled = properties.disabled
 }
+
+    // <fieldset class="form-group">
+    //   <label class="paper-check">
+	//   <input type="checkbox" name="paperChecks" value="option 2"> <span>This is the second check</span>

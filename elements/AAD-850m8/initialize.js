@@ -1,7 +1,7 @@
 function(instance, context) {
-    const label = document.createElement("label")
-    const labelSpan = document.createElement("span")
-    const checkbox = document.createElement("input")
+    const label = element("label")
+    const labelSpan = element("span")
+    const checkbox = element("input")
     
     label.append(checkbox)
     label.append(labelSpan)

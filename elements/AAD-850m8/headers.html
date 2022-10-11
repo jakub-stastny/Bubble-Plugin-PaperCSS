@@ -1,5 +1,10 @@
 <script>
-    function element (name, props, style) {
-        // TODO
+    function element (tagName, props = {}, style = {}) {
+        const element = document.createElement(tagName)
+		
+		Object.entries(props).forEach(([ key, value ]) => element[key] = value)
+		Object.entries(style).forEach(([ key, value ]) => element.style[key] = value)
+		
+		return element
     }
 </script>
