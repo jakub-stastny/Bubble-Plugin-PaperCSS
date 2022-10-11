@@ -1,7 +1,9 @@
 function(instance, context) {
-    const label = element("label", {}, {width: "100%", height: "100%"})
-    const labelSpan = element("span")
-    const checkbox = element("input", {type: "checkbox"}, {
+    const label = label({}, {width: "100%", height: "100%"})
+    const labelSpan = span()
+    const checkbox = input({
+		type: "checkbox"
+	}, {
 		display: "inline-block",
 		marginRight: "7px"
     })
