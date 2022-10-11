@@ -20,8 +20,8 @@ function(instance, context) {
     instance.canvas.style.width = "fit-content"
     instance.canvas.style.height = "fit-content"
 
-    checkbox.addEventListener("click", function (e) {
+    checkbox.addEventListener("change", (event) => {
         instance.triggerEvent("clicked")
-        instance.triggerEvent(e.target.checked ? "checked" : "unchecked")
+        instance.triggerEvent(event.target.checked ? "checked" : "unchecked")
     })
 }
