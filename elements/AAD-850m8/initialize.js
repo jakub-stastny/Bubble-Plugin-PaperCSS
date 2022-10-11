@@ -19,12 +19,11 @@ function(instance, context) {
     label.style.height = "100%"
 
     // Without this the button overflows the parent div, so it looks chopped off.
-    instance.canvas.style.width = "fit-content" //`${button.offsetHeight}px`
+    instance.canvas.style.width = "fit-content"
     instance.canvas.style.height = "fit-content"
 
     checkbox.addEventListener("click", function (e) {
         instance.triggerEvent("clicked")
         instance.triggerEvent(e.target.checked ? "checked" : "unchecked")
-        //console.log(e.target.checked ? "checked" : "unchecked")
     })
 }
