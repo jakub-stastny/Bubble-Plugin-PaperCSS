@@ -7,6 +7,8 @@ function(instance, context) {
     label.append(labelSpan)
     
     checkbox.type = "checkbox"
+	checkbox.style.display = "inline-block"
+	checkbox.style.marginRight = "7px"
     
     instance.canvas.append(label)
     
