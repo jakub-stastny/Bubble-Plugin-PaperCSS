@@ -9,5 +9,5 @@
 		return element
     }
 
-	["div", "span", "label", "input"].forEach(tagName => window[tagName] = element.apply(tagName))
+	["div", "span", "label", "form", "fieldset", "input"].forEach(tagName => window[tagName] = element.apply(tagName))
 </script>

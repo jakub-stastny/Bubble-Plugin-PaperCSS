@@ -1,6 +1,6 @@
 function(instance, properties, context) {
-    const { labelSpan, checkbox } = instance.data
+    const { topNode } = instance.data
 
-    labelSpan.innerText = properties.label
-    checkbox.disabled = properties.disabled
+    topNode.label.span.innerText = properties.label
+	topNode.label.input.disabled = properties.disabled
 }
