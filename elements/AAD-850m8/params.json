@@ -1,10 +1,48 @@
 {
     "add_is_visible": true,
-    "category": "visual elements",
+    "can_fit_width": true,
+    "category": "input forms",
     "default_dim": {
-        "height": 200,
-        "width": 400
+        "height": 20,
+        "width": 180
     },
-    "display": "PaperCSS check box",
-    "icon": "ion-android-checkbox-blank"
+    "display": "PaperCSS checkbox",
+    "events": {
+        "AAJ": {
+            "caption": "is clicked",
+            "doc": "When the checkbox is checked or unchecked",
+            "name": "clicked"
+        },
+        "AAK": {
+            "caption": "is checked",
+            "doc": "When the checkbox is checked",
+            "name": "checked"
+        },
+        "AAL": {
+            "caption": "is unchecked",
+            "doc": "When the checkbox is unchecked",
+            "name": "unchecked"
+        }
+    },
+    "fields": {
+        "AAI": {
+            "caption": "Label",
+            "default_val": "…edit me…",
+            "editor": "StaticText",
+            "name": "label",
+            "rank": 0
+        },
+        "AAM": {
+            "caption": "Disabled",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "disabled",
+            "rank": 1
+        }
+    },
+    "icon": "ion-android-checkbox-outline",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    }
 }

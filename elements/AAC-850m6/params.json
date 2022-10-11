@@ -12,7 +12,7 @@
         "AAF": {
             "caption": "is clicked",
             "doc": "When the button is clicked",
-            "name": "Click"
+            "name": "clicked"
         }
     },
     "fields": {
