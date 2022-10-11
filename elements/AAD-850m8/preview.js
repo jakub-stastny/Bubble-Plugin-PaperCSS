@@ -1,22 +1,18 @@
 function(instance, properties) {
-	const label = element("label")
+	const label = element("label", {}, {width: "100%", height: "100%"})
     const labelSpan = element("span")
-    const checkbox = element("input")
+    const checkbox = element("input", {type: "checkbox"}, {
+		display: "inline-block",
+		marginRight: "7px"
+    })
     
     label.append(checkbox)
     label.append(labelSpan)
-    
-    checkbox.type = "checkbox"
-	checkbox.style.display = "inline-block"
-	checkbox.style.marginRight = "7px"
     
     instance.canvas.append(label)
     
     instance.data.labelSpan = labelSpan
     instance.data.checkbox = checkbox
-    
-    label.style.width = "100%"
-    label.style.height = "100%"
 	
 	// Without this the button overflows the parent div, so it looks chopped off.
     instance.canvas.style.width = "fit-content"
