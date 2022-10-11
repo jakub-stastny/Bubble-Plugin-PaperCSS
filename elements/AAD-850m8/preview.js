@@ -17,14 +17,12 @@ function(instance, properties) {
     
     label.style.width = "100%"
     label.style.height = "100%"
-
-    // Without this the button overflows the parent div, so it looks chopped off.
+	
+	// Without this the button overflows the parent div, so it looks chopped off.
     instance.canvas.style.width = "fit-content"
     instance.canvas.style.height = "fit-content"
 
-    checkbox.innerText = properties.label
-    //button.style.width = properties.bubble.width() + "px"
-    //button.style.height = properties.bubble.height() + "px"
-    //button.classList.add("btn-" + properties.type)
-    checkbox.disabled = properties.disabled
+	// Update
+	labelSpan.innerText = properties.label
+	checkbox.disabled = properties.disabled
 }
