@@ -4,6 +4,8 @@
 //		<span>This is the second check</span>
 
 function(instance, context) {
+	window.instance = instance
+
 	// Without this the button overflows the parent div, so it looks chopped off.
     instance.canvas.style.width = "fit-content"
     instance.canvas.style.height = "fit-content"
