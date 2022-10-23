@@ -22,7 +22,7 @@ function(instance, context) {
 
   // Without this the button overflows the parent div, so it looks chopped off.
   // With it though, content is cut. For instance if I name the button "Updated button", it'll only show "Updated".
-  instance.canvas.style.width = instance.canvas.style.height = "fit-content" //`${button.offsetHeight}px`
+  //instance.canvas.style.width = "fit-content" //`${button.offsetHeight}px`
   //delete instance.canvas.style.minWidth
   //delete instance.canvas.style.minHeight
   if (instance.canvas.style.minWidth === instance.canvas.style.maxWidth) {
