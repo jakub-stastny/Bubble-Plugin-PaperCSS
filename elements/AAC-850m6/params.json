@@ -46,6 +46,6 @@
     "property_applications": {
         "Background": false,
         "MinWidth": true,
-        "resizable": true
+        "resizable": false
     }
 }
