@@ -17,6 +17,14 @@ function(instance, context) {
  
   instance.canvas.append(button)
   instance.data.button = button
+  
+  if (true) {
+    // Stretch
+    // instance.canvas.style.width = "100%"
+  } else {
+    instance.canvas.style.width = instance.canvas.style.height = "fit-content"
+    // Potential alternative overflow visible and calculate height of the button in it while removing its margins.
+  }
 
   // Without this the button overflows the parent div, so it looks chopped off.
   // With it though, content is cut. For instance if I name the button "Updated button", it'll only show "Updated".
