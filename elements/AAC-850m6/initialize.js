@@ -23,8 +23,8 @@ function(instance, context) {
   // Fix bottom shadow.
   instance.canvas.style.height = "fit-content"
   instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
-  console.log(instance.canvas.style.width)//
-  if (instance.canvas.style.width === "100%") {
+
+  if (instance.canvas.style.width === "calc(100% + 0px)") {
     // Stretch
     button.style.width = "100%"
   } else {
