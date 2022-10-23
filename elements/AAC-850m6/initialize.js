@@ -12,7 +12,7 @@
  */
 function(instance, context) {
   //const button = element("button", {}, {width: "100%", height: "100%"})
-  const button = element("button", {}, {width: "fit-content", height: "fit-content"})
+  const button = element("button", {}, {width: "fit-content", height: "fit-content", whiteSpace: "nowrap"})
  
   instance.canvas.append(button)
   instance.data.button = button
@@ -22,7 +22,14 @@ function(instance, context) {
 
   // Without this the button overflows the parent div, so it looks chopped off.
   // With it though, content is cut. For instance if I name the button "Updated button", it'll only show "Updated".
-  //instance.canvas.style.width = instance.canvas.style.height = "fit-content" //`${button.offsetHeight}px`
+  instance.canvas.style.width = instance.canvas.style.height = "fit-content" //`${button.offsetHeight}px`
+  //delete instance.canvas.style.minWidth
+  //delete instance.canvas.style.minHeight
+  if (instance.canvas.style.minWidth === instance.canvas.style.maxWidth) {
+    instance.canvas.style.minWidth = instance.canvas.style.maxWidth = null
+  }
+
+  instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
 
   button.addEventListener("click", () => instance.triggerEvent("clicked"))
 }

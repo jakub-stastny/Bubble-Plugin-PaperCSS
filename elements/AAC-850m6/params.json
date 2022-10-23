@@ -1,7 +1,7 @@
 {
     "add_hover_pressed": true,
     "add_is_visible": true,
-    "can_fit_height": true,
+    "can_fit_height": false,
     "can_fit_width": true,
     "category": "visual elements",
     "default_dim": {
