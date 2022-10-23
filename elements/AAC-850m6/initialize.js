@@ -17,6 +17,8 @@ function(instance, context) {
  
   instance.canvas.append(button)
   instance.data.button = button
+  
+  instance.canvas.style.overflow = "visible"
 
   // Fix bottom shadow.
   instance.canvas.style.height = "fit-content"
