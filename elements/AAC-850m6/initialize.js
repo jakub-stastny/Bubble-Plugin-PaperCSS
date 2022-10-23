@@ -17,6 +17,9 @@ function(instance, context) {
  
   instance.canvas.append(button)
   instance.data.button = button
+
+  // Fix bottom shadow.
+  instance.canvas.style.height = "fit-content"
   
   if (true) {
     // Stretch
