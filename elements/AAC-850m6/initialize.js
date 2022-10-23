@@ -24,18 +24,12 @@ function(instance, context) {
   instance.canvas.style.height = "fit-content"
   instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
   
-  if (true) {
+  if (instance.canvas.style.width === "100%") {
     // Stretch
-    // instance.canvas.style.width = "100%"
+    button.style.width = "fit-content"
   } else {
-    // (max/min)width += 29px
     instance.canvas.style.width = "fit-content"
-    // Potential alternative overflow visible and calculate height of the button in it while removing its margins.
   }
-
-  // Without this the button overflows the parent div, so it looks chopped off.
-  // With it though, content is cut. For instance if I name the button "Updated button", it'll only show "Updated".
-  //instance.canvas.style.width = instance.canvas.style.height = "fit-content" //`${button.offsetHeight}px`
 
   if (instance.canvas.style.minWidth === instance.canvas.style.maxWidth) {
     //instance.canvas.style.minWidth = instance.canvas.style.maxWidth = null
