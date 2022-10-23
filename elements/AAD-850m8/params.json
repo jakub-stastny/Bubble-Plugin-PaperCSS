@@ -1,4 +1,5 @@
 {
+    "add_hover_pressed": true,
     "add_is_visible": true,
     "can_fit_width": true,
     "category": "input forms",
@@ -43,6 +44,6 @@
     "icon": "ion-android-checkbox-outline",
     "property_applications": {
         "MinWidth": true,
-        "resizable": true
+        "resizable": false
     }
 }
