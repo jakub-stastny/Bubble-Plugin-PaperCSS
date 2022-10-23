@@ -13,7 +13,7 @@
 function(instance, context) {
   //const button = element("button", {}, {width: "100%", height: "100%"})
   //const button = element("button", {}, {width: "fit-content", height: "fit-content", whiteSpace: "nowrap"})
-  const button = element("button", {}, {whiteSpace: "nowrap", /*marginRight: "29px", marginBottom: "29px",*/ overflow: "visible"})
+  const button = element("button", {}, {whiteSpace: "nowrap", marginRight: "29px", marginBottom: "29px", overflow: "visible"})
  
   instance.canvas.append(button)
   instance.data.button = button
