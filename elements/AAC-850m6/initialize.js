@@ -20,12 +20,14 @@ function(instance, context) {
 
   // Fix bottom shadow.
   instance.canvas.style.height = "fit-content"
+  instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
   
   if (true) {
     // Stretch
     // instance.canvas.style.width = "100%"
   } else {
-    instance.canvas.style.width = instance.canvas.style.height = "fit-content"
+    // (max/min)width += 29px
+    instance.canvas.style.width = "fit-content"
     // Potential alternative overflow visible and calculate height of the button in it while removing its margins.
   }
 
@@ -36,8 +38,6 @@ function(instance, context) {
   if (instance.canvas.style.minWidth === instance.canvas.style.maxWidth) {
     //instance.canvas.style.minWidth = instance.canvas.style.maxWidth = null
   }
-
-  //instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
 
   button.addEventListener("click", () => instance.triggerEvent("clicked"))
 }
