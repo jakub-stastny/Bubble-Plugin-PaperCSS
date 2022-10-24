@@ -5,7 +5,7 @@
 
 function(instance, context) {
 	// Without this the button overflows the parent div, so it looks chopped off.
-  instance.canvas.style.height = instance.canvas.style.width = "fit-content"
+  updateStyle(instance.canvas, {width: "fit-content", height: "fit-content"})
 
 	// Create DOM.
 	const topNode = fieldset({class: "form-group"}, {width: "100%", height: "100%"}, () => (
@@ -21,8 +21,7 @@ function(instance, context) {
 	))
 
 	// Register.
-  instance.canvas.append(topNode)
-	instance.data.topNode = topNode
+  register(instance, {topNode})
 
 	// Events.
   checkbox.addEventListener("change", (event) => {

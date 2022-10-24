@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
 
 <script>
-  function element (tagName, props = {}, style = {}, fn = () => {}) {
+  function element(tagName, props = {}, style = {}, fn = () => {}) {
     const element = document.createElement(tagName)
 		
 		Object.entries(props).forEach(([ key, value ]) => element[key] = value)
@@ -26,6 +26,18 @@
 		return element
   }
 
-	["a", "article", "b", "br", "button", "code", "div", "em", "fieldset", "form", "form", "h1", "h2", "h3", "h4", "h5", "h6", "hr", "i", "img", "input", "label", "li", "link", "main", "meta", "nav", "ol", "p", "pre", "q", "script", "select", "span", "strike", "strong", "style", "sub", "sup", "table", "td", "textarea", "th", "title", "tr", "ul"].
-		forEach(tagName => window[tagName] = (...args) => element.apply(this, [tagName, ...args]))
+  function register(instance, hash) {
+    Object.entries(hash).forEach(([name, element]) => {
+      instance.canvas.append(element)
+      instance.data[name] = element
+    })
+  }
+
+  function updateStyle(element, style) {
+    console.log(`Updating ${element.name} with ${JSON.stringify(style)}`)
+
+    Object.entries(hash).forEach(([property, value]) => {
+      element.style[property] = value
+    })
+  }
 </script>

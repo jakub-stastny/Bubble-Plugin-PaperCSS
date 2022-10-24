@@ -1,22 +1,23 @@
 function(instance, context) {
-  const button = element("button", {}, {whiteSpace: "nowrap", overflow: "visible"})
- 
-  instance.canvas.append(button)
-  instance.data.button = button
-  
-  instance.canvas.style.overflow = "visible"
+  const button = element("button", {}, {
+    whiteSpace: "nowrap", overflow: "visible"})
 
   // Fix bottom shadow.
   // By doing so, we make the height always automatic and unchangeable.
-  instance.canvas.style.height = "fit-content"
-  instance.canvas.style.minHeight = instance.canvas.style.maxHeight = null
+  updateStyle(instance.canvas, {
+    overflow: "visible", height: "fit-content",
+    minHeight: null, maxHeight: null})
 
   if (instance.canvas.style.width === "calc(100% + 0px)") {
     // Stretch on say smartphone screens.
-    button.style.width = "100%"
+    updateStyle(button, {width: "100%"})
   } else {
-    instance.canvas.style.width = "fit-content"
+    updateStyle(instance.canvas, {width: "fit-content"})
   }
 
+  // Register.
+  register(instance, {button})
+
+  // Events.
   button.addEventListener("click", () => instance.triggerEvent("clicked"))
 }
