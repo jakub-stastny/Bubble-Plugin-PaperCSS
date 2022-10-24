@@ -36,7 +36,7 @@
   const genericClassNames = ["bubble-element"]
   function updateStyle(element, style) {
     const classNames = element.className.split(" ").filter(className => !genericClassNames.includes(className))
-    console.log(`Updating ${element.tagName}.${classNames.join(".")} with ${JSON.stringify(style)}`)
+    console.log(`Updating %c${element.tagName}%c.%c${classNames.join(".")} %cwith %c${JSON.stringify(style)}`, "color:#DC143C", "color:#000", "color:#006400", "color:#000", "color:#A9A9A9")
 
     Object.entries(hash).forEach(([property, value]) => {
       element.style[property] = value
