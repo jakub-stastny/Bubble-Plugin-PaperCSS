@@ -42,4 +42,14 @@
       element.style[property] = value
     })
   }
+  
+  function logErrors(label, fn) {
+    try {
+      fn()
+    } catch (error) {
+      console.error(`${label}: ${error.message}`)
+      console.error(error)
+      window.e = error
+    }
+  }
 </script>
