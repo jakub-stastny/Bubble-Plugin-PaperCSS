@@ -33,8 +33,10 @@
     })
   }
 
+  const genericClassNames = ["bubble-element"]
   function updateStyle(element, style) {
-    console.log(`Updating ${element.name} with ${JSON.stringify(style)}`)
+    const classNames = element.className.split(" ").filter(className => !genericClassNames.includes(className))
+    console.log(`Updating ${element.tagName}.${classNames.join(".")} with ${JSON.stringify(style)}`)
 
     Object.entries(hash).forEach(([property, value]) => {
       element.style[property] = value
