@@ -47,9 +47,7 @@
     try {
       fn()
     } catch (error) {
-      console.error(`${label}: ${error.message}`)
-      console.error(error)
-      window.e = error
+      console.log(`%c${error.name} %cin %c${label}%c: ${error.message}`, "color:#DC143C", "color:#000", "color:#006400", "color:#000")
     }
   }
 </script>

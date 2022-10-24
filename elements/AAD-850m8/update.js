@@ -1,6 +1,8 @@
 function(instance, properties, context) {
-  const { topNode } = instance.data
+  logErrors("PaperCSS.checkbox.update", () => {
+    const { topNode } = instance.data
 
-  topNode.label.span.innerText = properties.label
-	topNode.label.input.disabled = properties.disabled
+    topNode.label.span.innerText = properties.label
+  	topNode.label.input.disabled = properties.disabled
+  })
 }
