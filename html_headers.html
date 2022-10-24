@@ -33,7 +33,7 @@
     })
   }
 
-  const genericClassNames = ["bubble-element"]
+  const genericClassNames = ["bubble-element", ""]
   function updateStyle(element, style) {
     const classNames = element.className.split(" ").filter(className => !genericClassNames.includes(className))
     console.log({className: element.className, classNames: element.className.split(" "), filtered: element.className.split(" ").filter(className => !genericClassNames.includes(className))})
