@@ -35,7 +35,7 @@
             "rank": 1
         },
         "AAH": {
-            "caption": "Disabled",
+            "caption": "This element isn't clickable",
             "default_val": false,
             "doc": "Disabled button is not clickable, useful for instance if the form isn’t valid.",
             "editor": "Checkbox",
