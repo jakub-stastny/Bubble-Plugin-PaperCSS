@@ -25,6 +25,8 @@ function(instance, context) {
     register(instance, {topNode})
 
   	// Events.
+    button.addEventListener("mouseover", () => instance.triggerEvent("hovered"))
+
     checkbox.addEventListener("change", (event) => {
       instance.triggerEvent("clicked")
       instance.triggerEvent(event.target.checked ? "checked" : "unchecked")
