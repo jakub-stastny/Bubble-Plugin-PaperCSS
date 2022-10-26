@@ -21,6 +21,6 @@ function(instance, context) {
 
     // Events.
     button.addEventListener("mouseover", () => instance.triggerEvent("hovered"))
-    button.addEventListener("click", () => instance.triggerEvent("is_clicked"))
+    button.addEventListener("click", () => instance.triggerEvent("clicked"))
   })
 }
