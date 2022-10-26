@@ -37,10 +37,18 @@
         "AAH": {
             "caption": "This element isn't clickable",
             "default_val": false,
-            "doc": "Disabled button is not clickable, useful for instance if the form isn’t valid.",
+            "doc": "",
             "editor": "Checkbox",
             "name": "disabled",
             "rank": 2
+        },
+        "AAN": {
+            "caption": "Tooltip text (on hover)",
+            "doc": "",
+            "editor": "StaticText",
+            "name": "tooltip_text",
+            "optional": true,
+            "rank": 3
         }
     },
     "icon": "ion-ios-paper-outline",
