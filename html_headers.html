@@ -37,7 +37,8 @@
   function updateStyle(element, style) {
     const classNames = element.className.split(" ").filter(className => !genericClassNames.includes(className))
     console.log(`Updating %c${element.tagName}%c${classNames.length ? "." : ""}%c${classNames.join(".")} %cwith %c${JSON.stringify(style)}`, "color:#DC143C", "color:#000", "color:#006400", "color:#000", "color:#A9A9A9")
-    console.info(Object.assign({}, element.style)) // Debug original style before updating it.
+    const polishedStyle = Object.entries(element.style).reduce((buffer, [ key, value ]) => value !== "" ? buffer : Object.assign(buffer, {[key]: value}))
+    console.info(polishedStyle) // Debug original style before updating it.
 
     Object.entries(style).forEach(([property, value]) => {
       element.style[property] = value
