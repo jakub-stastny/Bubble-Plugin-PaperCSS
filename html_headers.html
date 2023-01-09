@@ -39,8 +39,8 @@
 
     // Click it. It didn't work with hover, so go and click it.
     element.addEventListener("click", (e) => {
-      console.log(`Style %c${JSON.stringify(style)}%c applied to:`, "color:#A9A9A9", "color:#000")
-      console.info("Original style before updating:", style)
+      console.log("New style applied", style)
+      console.info("Original style before updating:", element.style)
       console.info("Final style:", polishedStyle) // Debug original style before updating it.
     })
 
