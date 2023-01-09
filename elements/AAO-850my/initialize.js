@@ -15,9 +15,9 @@ function(instance, context) {
 
     // if (instance.canvas.style.width === "calc(100% + 0px)") {
     //   // Stretch on say smartphone screens.
-    //   updateStyle(button, {width: "100%"})
+      updateStyle(button, {width: "100%"})
     // } else {
-      updateStyle(instance.canvas, {width: "fit-content"})
+    //   updateStyle(instance.canvas, {width: "fit-content"})
     // }
 
     // Register.
