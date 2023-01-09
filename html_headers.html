@@ -40,7 +40,7 @@
     // Click it. It didn't work with hover, so go and click it.
     element.addEventListener("click", (e) => {
       console.log("New style applied", style)
-        console.info("Original style before updating:", element.style.reduce((buffer, [ key, value]) => value === "" ? buffer : Object.assign(buffer, {[key]: value}), {})
+        console.info("Original style before updating:", element.style.reduce((buffer, [ key, value]) => value === "" ? buffer : Object.assign(buffer, {[key]: value}), {}))
       console.info("Final style:", polishedStyle) // Debug original style before updating it.
     })
 
