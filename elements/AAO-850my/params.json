@@ -8,7 +8,7 @@
         "height": 55,
         "width": 120
     },
-    "display": "PaperCSS fit to content button",
+    "display": "PaperCSS stretch button",
     "events": {
         "AAF": {
             "caption": "is clicked",
