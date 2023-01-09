@@ -3,8 +3,7 @@ function(instance, context) {
     const button = element("button", {}, {
       whiteSpace: "nowrap", overflow: "visible"})
 
-    // Debug: show background on the canvas to make sure the element
-    // is filling the whole area of the canvas.
+    // Debug: show background on the canvas.
     instance.canvas.backgroundColor = "red"
 
     // Fix bottom shadow.
@@ -24,15 +23,7 @@ function(instance, context) {
     register(instance, {button})
 
     // Events.
-    const triggerEvent = (eventName) => {
-      return function () {
-        console.log(`~ Triggering event %c${eventName}%c.`,
-                    "color:#DC143C", "color:#000")
-        instance.triggerEvent(eventName)
-      }
-    }
-
-    button.addEventListener("mouseover", triggerEvent("hovered"))
-    button.addEventListener("click", triggerEvent("clicked"))
+    button.addEventListener("mouseover", () => instance.triggerEvent("hovered"))
+    button.addEventListener("click", () => instance.triggerEvent("clicked"))
   })
 }
