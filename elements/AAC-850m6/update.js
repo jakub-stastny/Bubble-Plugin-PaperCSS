@@ -1,5 +1,5 @@
 function(instance, properties, context) {
-  logErrors("PaperCSS.button.update", () => {
+  logErrors("PaperCSS.fit_to_content_button.update", () => {
     const { button } = instance.data
 
     console.log("~ Updating properties", properties)

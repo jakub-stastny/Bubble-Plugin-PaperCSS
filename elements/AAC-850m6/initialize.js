@@ -1,5 +1,5 @@
 function(instance, context) {
-  logErrors("PaperCSS.button.initialize", () => {
+  logErrors("PaperCSS.fit_to_content_button.initialize", () => {
     const button = element("button", {}, {
       whiteSpace: "nowrap", overflow: "visible"})
 
@@ -13,12 +13,12 @@ function(instance, context) {
       overflow: "visible", height: "fit-content",
       minHeight: null, maxHeight: null})
 
-    if (instance.canvas.style.width === "calc(100% + 0px)") {
-      // Stretch on say smartphone screens.
-      updateStyle(button, {width: "100%"})
-    } else {
+    // if (instance.canvas.style.width === "calc(100% + 0px)") {
+    //   // Stretch on say smartphone screens.
+    //   updateStyle(button, {width: "100%"})
+    // } else {
       updateStyle(instance.canvas, {width: "fit-content"})
-    }
+    // }
 
     // Register.
     register(instance, {button})
