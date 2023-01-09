@@ -26,7 +26,7 @@ function(instance, context) {
     const triggerEvent = (eventName) => {
       return function () {
         console.log(`~ Triggering ${eventName}`)
-        instance.triggerEvent(eventName))
+        instance.triggerEvent(eventName)
       }
     }
 
