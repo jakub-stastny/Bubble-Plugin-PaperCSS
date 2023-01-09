@@ -23,7 +23,7 @@ function(instance, context) {
     register(instance, {button})
 
     // Events.
-    const triggerEvent = (eventName) {
+    const triggerEvent = (eventName) => {
       return function () {
         console.log(`~ Triggering ${eventName}`)
         instance.triggerEvent(eventName))
