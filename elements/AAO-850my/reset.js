@@ -1,5 +1,2 @@
 function(instance, context) {
-
-
-
 }
