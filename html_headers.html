@@ -38,7 +38,7 @@
     // CSSStylesDeclaration object has all the CSS properties and most of them have an empty string as their value.
     const clearedStyleObject = Object.entries(element.style).
       reduce((buffer, [ key, value ]) =>
-        value === "" || Number.isInteger(key) ? buffer : Object.assign(buffer, {[key]: value}), {})
+        value === "" || key.match(/^\d+$/) ? buffer : Object.assign(buffer, {[key]: value}), {})
 
     // Debug. Click it. It didn't work with hover, so go and click it.
     element.addEventListener("click", (e) => {
