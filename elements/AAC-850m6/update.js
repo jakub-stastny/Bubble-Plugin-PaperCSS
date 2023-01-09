@@ -2,8 +2,13 @@ function(instance, properties, context) {
   logErrors("PaperCSS.button.update", () => {
     const { button } = instance.data
 
+    console.log("~ Updating properties", properties)
+
+    if (properties.tooltip_text) {
+      button.title = properties.tooltip_text
+    }
+
     button.innerText = properties.label
-    button.title = properties.tooltip_text
     button.classList.add("btn-" + properties.type)
     button.disabled = properties.disabled
   })
