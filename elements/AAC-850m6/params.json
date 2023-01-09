@@ -2,13 +2,13 @@
     "add_hover_pressed": true,
     "add_is_visible": true,
     "can_fit_height": false,
-    "can_fit_width": true,
+    "can_fit_width": false,
     "category": "visual elements",
     "default_dim": {
         "height": 55,
         "width": 120
     },
-    "display": "PaperCSS button",
+    "display": "PaperCSS fit to content button",
     "events": {
         "AAF": {
             "caption": "is clicked",
