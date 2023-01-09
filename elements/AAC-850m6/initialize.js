@@ -3,6 +3,9 @@ function(instance, context) {
     const button = element("button", {}, {
       whiteSpace: "nowrap", overflow: "visible"})
 
+    // Debug: show background on the canvas.
+    instance.canvas.backgroundColor = "red"
+
     // Fix bottom shadow.
     // By doing so, we make the height always automatic and unchangeable.
     updateStyle(instance.canvas, {
