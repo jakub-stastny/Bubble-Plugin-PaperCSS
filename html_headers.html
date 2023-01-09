@@ -37,15 +37,9 @@
   function updateStyle(element, style) {
     const polishedStyle = Object.entries(element.style).reduce((buffer, [ key, value ]) => value === "" ? buffer : Object.assign(buffer, {[key]: value}), {})
 
-    // It didn't work with hover, so just click on 'em in order to get debug info.
+    // Click it. It didn't work with hover, so go and click it.
     element.addEventListener("click", (e) => {
-      console.log(`Click: Style %c${JSON.stringify(style)}%c applied to:`, "color:#A9A9A9", "color:#000")
-      console.info("Final style:", polishedStyle) // Debug original style before updating it.
-    })
-
-    // ?
-    element.addEventListener("hover", (e) => {
-      console.log(`Hover: Style %c${JSON.stringify(style)}%c applied to:`, "color:#A9A9A9", "color:#000")
+      console.log(`Style %c${JSON.stringify(style)}%c applied to:`, "color:#A9A9A9", "color:#000")
       console.info("Final style:", polishedStyle) // Debug original style before updating it.
     })
 
