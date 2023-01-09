@@ -51,6 +51,12 @@
     })
   }
 
+  function resetStyle(element) {
+    element.style = ""
+    // Object.entries(element.style).
+    //   forEach(([key, value] => delete element[key])
+  }
+
   function logErrors(label, fn) {
     try {
       fn()

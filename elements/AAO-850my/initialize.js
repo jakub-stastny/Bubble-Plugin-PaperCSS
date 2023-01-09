@@ -7,6 +7,8 @@ function(instance, context) {
     // is filling the whole area of the canvas.
     instance.canvas.backgroundColor = "red"
 
+    resetStyle(instance.canvas)
+
     updateStyle(instance.canvas, {
       overflow: "visible", height: "fit-content",
       width: "100%", minHeight: null, maxHeight: null})
