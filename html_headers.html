@@ -44,7 +44,7 @@
     element.addEventListener("click", (e) => {
       console.info("Original style before updating:", clearedStyleObject)
       console.log("New style applied", style)
-      console.info("Final style (simulation):", Object.extend({}, clearedStyleObject))
+      console.info("Final style (simulation):", Object.assign({}, clearedStyleObject, style))
     })
 
     Object.entries(style).forEach(([property, value]) => {
