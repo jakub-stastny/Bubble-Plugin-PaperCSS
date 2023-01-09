@@ -23,7 +23,14 @@ function(instance, context) {
     register(instance, {button})
 
     // Events.
-    button.addEventListener("mouseover", () => instance.triggerEvent("hovered"))
-    button.addEventListener("click", () => instance.triggerEvent("clicked"))
+    const triggerEvent = (eventName) {
+      return function () {
+        console.log(`~ Triggering ${eventName}`)
+        instance.triggerEvent(eventName))
+      }
+    }
+
+    button.addEventListener("mouseover", triggerEvent("hovered"))
+    button.addEventListener("click", triggerEvent("clicked"))
   })
 }
