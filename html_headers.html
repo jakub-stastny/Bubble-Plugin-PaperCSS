@@ -36,13 +36,15 @@
     // "color:#DC143C", "color:#000", "color:#006400", "color:#000", "color:#A9A9A9"
   function updateStyle(element, style) {
     // CSSStylesDeclaration object has all the CSS properties and most of them have an empty string as their value.
-    const clearedStyleObject = Object.entries(element.style).reduce((buffer, [ key, value ]) => value === "" ? buffer : Object.assign(buffer, {[key]: value}), {})
+    const clearedStyleObject = Object.entries(element.style).
+      reduce((buffer, [ key, value ]) =>
+        value === "" || Number.isInteger(key) ? buffer : Object.assign(buffer, {[key]: value}), {})
 
     // Debug. Click it. It didn't work with hover, so go and click it.
     element.addEventListener("click", (e) => {
       console.info("Original style before updating:", clearedStyleObject)
       console.log("New style applied", style)
-      console.info("Final style (simulation):", Object.extend({}, clearedStyleObject, style))
+      console.info("Final style (simulation):", Object.extend({}, clearedStyleObject))
     })
 
     Object.entries(style).forEach(([property, value]) => {
