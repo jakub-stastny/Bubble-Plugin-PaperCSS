@@ -15,15 +15,7 @@ function(instance, context) {
     register(instance, {button})
 
     // Events.
-    const triggerEvent = (eventName) => {
-      return function () {
-        console.log(`~ Triggering event %c${eventName}%c.`,
-                    "color:#DC143C", "color:#000")
-        instance.triggerEvent(eventName)
-      }
-    }
-
-    button.addEventListener("mouseover", triggerEvent("hovered"))
-    button.addEventListener("click", triggerEvent("clicked"))
+    button.addEventListener("mouseover", triggerEvent(instance, "hovered"))
+    button.addEventListener("click", triggerEvent(instance, "clicked"))
   })
 }

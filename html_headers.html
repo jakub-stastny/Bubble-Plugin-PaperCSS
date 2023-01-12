@@ -51,6 +51,14 @@
     })
   }
 
+  function triggerEvent(instance, eventName) {
+    return function () {
+      console.log(`~ Triggering event %c${eventName}%c.`,
+                  "color:#DC143C", "color:#000")
+      instance.triggerEvent(eventName)
+    }
+  }
+
   function logErrors(label, fn) {
     try {
       fn()
