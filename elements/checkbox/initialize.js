@@ -25,11 +25,19 @@ function(instance, context) {
     register(instance, {topNode})
 
   	// Events.
-    button.addEventListener("mouseover", () => instance.triggerEvent("hovered"))
+    const triggerEvent = (eventName) => {
+      return function () {
+        console.log(`~ Triggering event %c${eventName}%c.`,
+                    "color:#DC143C", "color:#000")
+        instance.triggerEvent(eventName)
+      }
+    }
+
+    button.addEventListener("mouseover", () => triggerEvent("hovered"))
 
     checkbox.addEventListener("change", (event) => {
-      instance.triggerEvent("clicked")
-      instance.triggerEvent(event.target.checked ? "checked" : "unchecked")
+      triggerEvent("clicked")()
+      triggerEvent(event.target.checked ? "checked" : "unchecked")()
     })
   })
 }

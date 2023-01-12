@@ -3,10 +3,7 @@ function(instance, context) {
     const button = element("button", {}, {
       whiteSpace: "nowrap", overflow: "visible"})
 
-    // Debug: show background on the canvas to make sure the element
-    // is filling the whole area of the canvas.
-    instance.canvas.backgroundColor = "red"
-
+    // Tweak CSS.
     updateStyle(instance.canvas, {
       overflow: "visible",
       width: "100%", minWidth: null, maxWidth: null,
